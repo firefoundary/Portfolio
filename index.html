@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <header>
+        <div class="top-header">
+            <h1>Advay Singh</h1>
+            <p>B.Tech Computer Science & Engineering Student</p>
+        </div>
+        <nav class="main-nav" id="mainNav">
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <script>
+            window.addEventListener('DOMContentLoaded', function() {
+                const nav = document.getElementById('mainNav');
+                const topHeader = document.querySelector('.top-header');
+                const stickyPoint = topHeader.offsetHeight;
+            
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY >= stickyPoint) {
+                        nav.classList.add('sticky');
+                    } else {
+                        nav.classList.remove('sticky');
+                    }
+                });
+            });
+        </script>     
+    </header>
+    
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                I'm an enthusiastic B.Tech Computer Science and Engineering (CSE) student, interested in creating real-world, practical software. I like solving problems using efficient code and investigating how hardware and software work together—often testing the boundaries of what personal computing can accomplish.
+
+
+            </p>
+            <p>
+                I’m committed to continuous learning, from mastering algorithms and system architecture to exploring framworks. Whether it’s embedded logic, user interface design, or real-time responsiveness—I thrive on bringing ideas to life through code.
+            </p>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <strong>Bachelor of Technology - Computer Science & Engineering</strong><br>
+                    VIT Bhopal University | 2023 - 2027<br>
+                    <em>Current CGPA: 8.2</em>
+                </li>
+                <li>
+                    <strong>Higher Secondary Education</strong><br>
+                    The Air Force School | 2021 - 2023<br>
+                    <em>Percentage: 92%</em>
+                </li>
+            </ul>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div>
+                    <h3>Technical Skills</h3>
+                    <ul>
+                        <li>Programming Languages: Python, C++ , Java , JavaScript</li>
+                        <li>Web Development: HTML5, CSS, React.js, Node.js</li>
+                        <li>Database: MySQL, MongoDB</li>
+                        <li>Tools: Git, Docker, VS Code</li>
+                        <li>Core Concepts: Data Structures, Algorithms, OOP</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>Problem Solving & Analytical Thinking</li>
+                        <li>Team Collaboration</li>
+                        <li>Effective Communication</li>
+                        <li>Project Management</li>
+                        <li>Adaptability & Quick Learning</li>
+                        <li>Time Management</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <ul>
+                <li>
+                    <strong>Machiene Learning</strong> - NPTEL<br>
+                    <em>Completed comprehensive course covering Machiene Learning</em>
+                </li>
+                <li>
+                    <strong>Java Professional SE17</strong> - Oracle<br>
+                    <em>Certified in the latest Java model</em>
+                </li>
+                <li>
+                    <strong>IBM Cloud Computing</strong> - Coursera<br>
+                    <em>Specialized course focusing on cloud computing</em>
+                </li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                    <strong>Student Management App</strong><br>
+                    <em>Technologies: React.js, Tailwind CSS, Next.js, Node.js, MongoDB, Prisma, Gemini API</em><br>
+                    Developed an AI-integrated web application designed to help teachers manage student data efficiently and generate personalized feedback using academic performance, attendance, and behavioral insights.<br>
+                        <a href="https://github.com/firefoundary/Student-Feedback-App">Github Link</a>
+                    
+                </li>
+                <li>
+                    <strong>Learni_Verse</strong><br>
+                    <em>Technologies: TypeScript, CSS, HTML, JavaScript</em><br>
+                    Created a gamified learning platform designed to make education more engaging, interactive, and rewarding through challenges, progress tracking, and achievement-based motivation.<br>
+                    <a href="https://github.com/ayushYadav1107/Learni_Verse">Github Link</a>
+                </li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Let's connect and discuss opportunities!</p>
+            <ul>
+                <li><a href="mailto:cipher34276@gmail.com">Gmail</a></li>
+                <li><a href="https://www.linkedin.com/in/advay-singh-454002296/">LinkedIn</a></li>
+                <li><a href="https://github.com/firefoundary">GitHub</a> </li>
+            </ul>
+        </section>
+    </main>
+
+</body>
+</html>

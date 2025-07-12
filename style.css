@@ -1,0 +1,397 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Light Blue & Teal Professional Theme */
+:root {
+  --primary-color: #F5F7FA;         /* Light gray-blue background */
+  --secondary-color: #2E3A59;       /* Dark navy text */
+  --accent-color: #4A90E2;          /* Bright blue accent */
+  --accent-secondary: #50E3C2;      /* Teal secondary accent */
+  --text-light: #2E3A59;            /* Dark navy text */
+  --text-dark: #2E3A59;             /* Dark navy text */
+  --bg-light: #FFFFFF;              /* White cards */
+  --bg-dark: #F5F7FA;               /* Light gray-blue background */
+  --card-bg: #FFFFFF;               /* White cards */
+  --shadow: 0 4px 16px rgba(46, 58, 89, 0.1);
+  --shadow-hover: 0 8px 24px rgba(46, 58, 89, 0.15);
+  --border-radius: 12px;
+  --transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(74, 144, 226, 0.2);
+  color: var(--text-light);
+  transition: color 0.2s;
+  /* Remove padding-left and ::before content */
+}
+
+ul li:last-child {
+  border-bottom: none;
+}
+
+ul li:hover {
+  color: var(--accent-color);
+}
+
+/* Remove the bullet point pseudo-element completely */
+ul li::before {
+  display: none;
+}
+
+
+a {
+  color: #4A90E2;  /* Your bright blue accent */
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: #50E3C2;  /* Your teal secondary accent */
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #3A7BC8;  /* Slightly darker blue for visited links */
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background: var(--bg-dark);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Top Header (Name & Title) */
+.top-header {
+  text-align: center;
+  padding: 2rem 1rem 1.2rem 1rem;
+  background: var(--card-bg);
+  color: var(--text-dark);
+  box-shadow: var(--shadow);
+}
+
+.top-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
+}
+
+.top-header p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+/* Sticky Main Navigation */
+.main-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+  background: var(--card-bg);
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 2px solid var(--accent-color);
+  box-shadow: var(--shadow);
+}
+
+.main-nav a {
+  color: #2E3A59;
+  background: transparent;
+  border: 1px solid transparent;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.main-nav.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--card-bg);
+  box-shadow: 0 6px 20px rgba(46, 58, 89, 0.2);
+  z-index: 1100;
+}
+
+.main-nav a:hover {
+  background: #4A90E2;  /* Bright blue background */
+  color: #FFFFFF;       /* White text */
+  border-color: #4A90E2;
+}
+
+/* Main Content Margin */
+main {
+  margin-top: 60px;
+  background: var(--bg-dark);
+}
+
+/* Section Styles */
+section {
+  max-width: 900px;
+  margin: 3rem auto;
+  background: var(--card-bg);
+  padding: 3rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  color: var(--text-dark);
+  border: 1px solid rgba(74, 144, 226, 0.2);
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--accent-color);
+}
+
+/* Section Titles */
+h2 {
+  color: var(--accent-color);
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 0.5rem;
+}
+
+h3 {
+  color: var(--accent-secondary);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+/* Skills Section */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.skills-container > div {
+  background: var(--bg-dark);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(74, 144, 226, 0.2);
+  transition: var(--transition);
+}
+
+.skills-container > div:hover {
+  border-color: var(--accent-secondary);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Lists */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(74, 144, 226, 0.2);
+  position: relative;
+  padding-left: 2rem;
+  color: var(--text-light);
+  transition: color 0.2s;
+}
+
+ul li:last-child {
+  border-bottom: none;
+}
+
+ul li::before {
+  content: '●';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-size: 0.9rem;
+}
+
+ul li:hover {
+  color: var(--accent-color);
+}
+
+/* Projects and Certifications */
+#projects ul li,
+#certifications ul li {
+  background: var(--bg-dark);
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--accent-color);
+  color: var(--text-dark);
+  transition: var(--transition);
+}
+
+#projects ul li:hover,
+#certifications ul li:hover {
+  background: var(--card-bg);
+  border-left-color: var(--accent-secondary);
+  transform: translateX(5px);
+}
+
+.project-link {
+  display: inline-block;
+  color: #4A90E2;
+  background: rgba(74, 144, 226, 0.1);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0.2rem;
+  transition: all 0.2s ease;
+}
+
+.project-link:hover {
+  background: #50E3C2;
+  color: #FFFFFF;
+  transform: scale(1.05);
+}
+
+/* Contact Section */
+#contact ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#contact ul li {
+  background: var(--accent-color);
+  color: var(--card-bg);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 500;
+  border: 1px solid var(--accent-color);
+  transition: background 0.2s, color 0.2s;
+}
+
+#contact ul li:hover {
+  background: var(--accent-secondary);
+  color: var(--card-bg);
+  border-color: var(--accent-secondary);
+}
+
+#contact a {
+  color: #ffffff;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+#contact a:hover {
+  background: rgba(255, 255, 255, 0.1);  /* Light teal background */
+  color: #000000;
+  transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: var(--card-bg);
+  color: var(--text-light);
+  margin-top: 3rem;
+  border-top: 1px solid rgba(74, 144, 226, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  section {
+    margin: 2rem 1rem;
+    padding: 2rem;
+  }
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+  .main-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-nav a {
+    width: 200px;
+    text-align: center;
+  }
+  #contact ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-header {
+    padding: 1.5rem 1rem;
+  }
+  .top-header h1 {
+    font-size: 2rem;
+  }
+  section {
+    padding: 1.5rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  section:nth-child(1) { animation-delay: 0.1s; }
+  section:nth-child(2) { animation-delay: 0.2s; }
+  section:nth-child(3) { animation-delay: 0.3s; }
+  section:nth-child(4) { animation-delay: 0.4s; }
+  section:nth-child(5) { animation-delay: 0.5s; }
+  section:nth-child(6) { animation-delay: 0.6s; }
+}
